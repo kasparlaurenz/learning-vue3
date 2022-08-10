@@ -15,16 +15,10 @@ export default {
       title: "My first project :)",
     };
   },
-  methods: {
-    handleClick() {
-      this.$refs.name.classList.add("active");
-      this.$refs.name.focus();
-    },
-  },
 };
 </script>
 
-<style scoped>
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
