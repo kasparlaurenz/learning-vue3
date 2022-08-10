@@ -12,7 +12,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .backdrop {
   top: 0;
   position: fixed;
@@ -21,6 +21,10 @@ export default {
   height: 100%;
 }
 .modal {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
   width: 400px;
   padding: 20px;
   margin: 100px auto;
