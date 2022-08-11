@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
-  <Modal />
+  <Modal header="This is a prop" />
 </template>
 
 <script>
@@ -19,18 +19,21 @@ export default {
 </script>
 
 <style>
+:root {
+  --main-color: rgb(20, 146, 219);
+  --white: white;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 body {
-  background-color: rgb(249, 249, 249);
+  background-color: var(--white);
 }
 h1 {
-  color: rgb(20, 146, 219);
+  color: var(--main-color);
 }
 </style>
