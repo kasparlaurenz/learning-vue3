@@ -2,29 +2,26 @@
   <h1>{{ title }}</h1>
   <p>Welcome</p>
   <div v-if="showModal">
-    <Modal
-      :header="header"
-      :content="text"
-      theme="sale"
-      @close="toggleModal"
-      :showModal="showModal"
-    />
+    <Modal theme="sale" @close="toggleModal" :showModal="showModal">
+      <h1>Test</h1>
+      <p>Unterschrift</p>
+    </Modal>
   </div>
   <button @click="toggleModal">Open Modal</button>
 </template>
 
 <script>
-import Modal from "./components/Modal.vue";
+import Modal from './components/Modal.vue';
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Modal,
   },
   data() {
     return {
-      title: "My first project :)",
-      header: "This is a prop",
-      text: "Im dynamic content",
+      title: 'My first project :)',
+      header: 'This is a prop',
+      text: 'Im dynamic content',
       showModal: false,
     };
   },
