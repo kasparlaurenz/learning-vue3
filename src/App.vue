@@ -1,6 +1,16 @@
 <template>
   <h1>{{ title }}</h1>
-  <Modal header="This is a prop" />
+  <p>Welcome</p>
+  <div v-if="showModal">
+    <Modal
+      :header="header"
+      :content="text"
+      theme="sale"
+      @close="toggleModal"
+      :showModal="showModal"
+    />
+  </div>
+  <button @click="toggleModal">Open Modal</button>
 </template>
 
 <script>
@@ -13,7 +23,15 @@ export default {
   data() {
     return {
       title: "My first project :)",
+      header: "This is a prop",
+      text: "Im dynamic content",
+      showModal: false,
     };
+  },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal;
+    },
   },
 };
 </script>
@@ -35,5 +53,8 @@ body {
 }
 h1 {
   color: var(--main-color);
+}
+button:hover {
+  cursor: pointer;
 }
 </style>
