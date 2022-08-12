@@ -48,6 +48,28 @@ export default {
   border-radius: 10px;
 }
 
+.modal .actions {
+  text-align: center;
+  margin: 30px 0px 10px 0px;
+  color: #333;
+}
+
+.modal .actions a {
+  color: #eee;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal .actions a:hover {
+  color: rgb(33, 33, 33);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgb(33, 33, 33);
+}
+
 .modal.sale {
   background-color: crimson;
   color: white;

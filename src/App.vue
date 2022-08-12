@@ -9,10 +9,18 @@
       </template>
       <h1>Test</h1>
       <p>Unterschrift</p>
-      <a href="/">Link</a>
+      <a href="/">Link in normal slot</a>
+    </Modal>
+  </div>
+  <div v-if="showModalTwo">
+    <Modal @close="toggleModalTwo">
+      <h1>{{ title }}</h1>
     </Modal>
   </div>
   <button @click="toggleModal">Open Modal</button>
+  <br />
+  <br />
+  <button @click="toggleModalTwo">Open Modal Two</button>
 </template>
 
 <script>
@@ -28,11 +36,15 @@ export default {
       header: 'This is a prop',
       text: 'Im dynamic content',
       showModal: false,
+      showModalTwo: false,
     };
   },
   methods: {
     toggleModal() {
       this.showModal = !this.showModal;
+    },
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo;
     },
   },
 };
