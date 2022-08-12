@@ -3,8 +3,13 @@
   <p>Welcome</p>
   <div v-if="showModal">
     <Modal theme="sale" @close="toggleModal" :showModal="showModal">
+      <template v-slot:links>
+        <a href="/">Sign Up now</a>
+        <a href="/">More Info</a>
+      </template>
       <h1>Test</h1>
       <p>Unterschrift</p>
+      <a href="/">Link</a>
     </Modal>
   </div>
   <button @click="toggleModal">Open Modal</button>

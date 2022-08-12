@@ -2,6 +2,9 @@
   <div class="backdrop" @click.self="closeModal" :class="{ open: showModal }">
     <div class="modal" :class="{ sale: theme === 'sale' }">
       <slot></slot>
+      <div class="actions">
+        <slot name="links"></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -18,7 +21,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .backdrop {
   top: 0;
   position: fixed;
