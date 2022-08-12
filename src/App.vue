@@ -1,7 +1,7 @@
 <template>
   <h1>{{ title }}</h1>
   <p>Welcome</p>
-  <div v-if="showModal">
+  <teleport to=".modals" v-if="showModal">
     <Modal theme="sale" @close="toggleModal" :showModal="showModal">
       <template v-slot:links>
         <a href="/">Sign Up now</a>
@@ -11,7 +11,7 @@
       <p>Unterschrift</p>
       <a href="/">Link in normal slot</a>
     </Modal>
-  </div>
+  </teleport>
   <div v-if="showModalTwo">
     <Modal @close="toggleModalTwo">
       <h1>{{ title }}</h1>
@@ -55,7 +55,8 @@ export default {
   --main-color: rgb(20, 146, 219);
   --white: white;
 }
-#app {
+#app,
+.modals {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
